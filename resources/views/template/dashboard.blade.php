@@ -2,10 +2,9 @@
 
 
 @section('content')
-<div class="container-fluid mt-4 d-flex justify-content-center">
-    <div class="d-flex flex-wrap">
+<div class="container-fluid mt-4 d-flex justify-content-center flex-wrap gap-5">
         @foreach($data as $row)
-        <div class="rounded bg-white m-2 shadow p-0" style="width: 250px; height: 300px; overflow: hidden;">
+        <div class="rounded bg-white shadow p-0 col-md-3" style=" height: 300px; overflow: hidden;">
             <img src="{{asset('storage/images/book/'. $row->cover )}}" class="col-md-12 p-0"
                 style="height: 150px; object-fit: cover;" alt="">
             <div class="p-2">
@@ -20,6 +19,5 @@
             </div>
         </div>
         @endforeach
-    </div>
 </div>
 @endsection
